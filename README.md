@@ -8,5 +8,5 @@ to use get router to see all tasks
 To use post router to add new task </br>
 `curl -X POST http://localhost:4567/tasks \
      -H "Content-Type: application/json" \
-     -d '{"title": "Minha nova tarefa"}'`
+     -d '{"title": "go to the gym"}'`
 
