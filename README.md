@@ -10,3 +10,8 @@ To use post router to add new task </br>
      -H "Content-Type: application/json" \
      -d '{"title": "go to the gym"}'`
 
+<br/><br/>
+
+to use rswagger run `ruby -run -e httpd . -p 8000
+`
+
