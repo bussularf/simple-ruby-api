@@ -14,5 +14,5 @@ use `curl` to interact with the API.  </br>
 exemples: 
 to use get router to see all tasks 
    `curl -X GET http://127.0.0.1:4567/tasks`
-<br/>
+<br/><br/>
 #ruby #sinatra #rswagger 
