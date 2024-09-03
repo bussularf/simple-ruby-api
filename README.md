@@ -9,7 +9,7 @@ In browser: http://127.0.0.1:4567/
 
 <img src="img.png"></br> </br>
 
-In you console:
+In your console:
 use `curl` to interact with the API.  </br>
 exemples: 
 to use get router to see all tasks 
