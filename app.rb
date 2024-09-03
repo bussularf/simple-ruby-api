@@ -21,3 +21,11 @@ delete '/tasks/:index' do
   tasks.delete_at(index)
   { status: 'Task deleted' }.to_json
 end
+
+get '/' do
+  send_file 'index.html'
+end
+
+get '/swagger.yaml' do
+  send_file 'swagger.yaml'
+end

@@ -40,3 +40,22 @@ paths:
                 properties:
                   title:
                     type: string
+  /tasks/{index}:
+    delete:
+      summary: Delete a task by index
+      parameters:
+        - in: path
+          name: index
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Task deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
