@@ -40,15 +40,14 @@ paths:
                 properties:
                   title:
                     type: string
-  /tasks/{index}:
     delete:
-      summary: Delete a task by index
+      summary: Delete a task by title
       parameters:
-        - in: path
-          name: index
+        - in: query
+          name: title
           required: true
           schema:
-            type: integer
+            type: string
       responses:
         '200':
           description: Task deleted successfully
@@ -58,4 +57,13 @@ paths:
                 type: object
                 properties:
                   status:
+                    type: string
+        '404':
+          description: Task not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
                     type: string

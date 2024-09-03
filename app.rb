@@ -15,11 +15,18 @@ post '/tasks' do
   task.to_json
 end
 
-delete '/tasks/:index' do
+delete '/tasks' do
   content_type :json
-  index = params['index'].to_i
-  tasks.delete_at(index)
-  { status: 'Task deleted' }.to_json
+  title = params['title']
+  task_to_delete = tasks.find { |task| task['title'] == title }
+  
+  if task_to_delete
+    tasks.delete(task_to_delete)
+    { status: 'Task deleted' }.to_json
+  else
+    status 404
+    { error: 'Task not found' }.to_json
+  end
 end
 
 get '/' do
